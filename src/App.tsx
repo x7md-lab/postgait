@@ -52,7 +52,7 @@ function App() {
       <section className='bg-white grid lg:grid-cols-7 grid-cols-1  h-full'>
         <div className='w-full lg:col-span-4 bg-[#FC746C]'>
           <div className="grid">
-            <img className='col-start-1 row-start-1 w-full max-h-[400px]' src="/shine.svg" />
+            <img className='col-start-1 row-start-1 w-full max-h-[400px]' src="/postgait/shine.svg" />
             <div className="col-start-1 row-start-1 flex flex-col p-8 gap-12">
               <svg className="size-24" viewBox="0 0 113 113" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M57.5 107.005L57.5 5.99999" stroke="white" stroke-width="12" stroke-linecap="round"/>
@@ -73,7 +73,7 @@ function App() {
         </div>
         <div className="lg:col-span-3 lg:order-none order-first w-full flex flex-col items-center p-5">
           <form className="my-7 flex flex-col gap-8 items-center text-[#48505E]">
-          <img className="my-4" src="/logo.svg" />
+          <img className="my-4" src="/postgait/logo.svg" />
               <div className="text-center px-16 mix-w-[85px]">
               <h2 className="font-bold text-2xl text-black">Log in to your account</h2>
               <br />
