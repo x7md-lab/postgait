@@ -8,6 +8,11 @@ html, body, #root {
 body {
     font-family: "Inter", sans-serif;
 }
+
+.emoji {
+  font-family: "Noto Color Emoji", "Inter";
+}
+
 @layer base {
   :root {
         --background: 0 0% 100%;

@@ -25,25 +25,25 @@ import {
  
 const counties = [
   {
-    value: "next.js",
-    label: "Next.js",
+    value: "+966",
+    label: "🇸🇦 +966",
   },
-  {
-    value: "sveltekit",
-    label: "SvelteKit",
-  },
-  {
-    value: "nuxt.js",
-    label: "Nuxt.js",
-  },
-  {
-    value: "remix",
-    label: "Remix",
-  },
-  {
-    value: "astro",
-    label: "Astro",
-  },
+  // {
+  //   value: "sveltekit",
+  //   label: "SvelteKit",
+  // },
+  // {
+  //   value: "nuxt.js",
+  //   label: "Nuxt.js",
+  // },
+  // {
+  //   value: "remix",
+  //   label: "Remix",
+  // },
+  // {
+  //   value: "astro",
+  //   label: "Astro",
+  // },
 ]
 
 function App() {
@@ -117,7 +117,9 @@ export function ComboboxDemo() {
           className="justify-between text-xs"
         >
           {value
-            ? counties.find((country) => country.value === value)?.label
+            ? <span><span className='emoji'>{counties.find((country) => country.value === value)?.label.split(" ")[0]}</span> 
+              <span>{counties.find((country) => country.value === value)?.label.split(" ")[1]}</span>
+            </span>
             : "🏳️"}
          <svg xmlns="http://www.w3.org/2000/svg" className='size-5' viewBox="0 0 24 24">
          <path fill="currentColor" d="m7 10l5 5l5-5z"/>
