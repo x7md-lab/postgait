@@ -1,13 +1,8 @@
 import { useState } from 'react'
-//@ts-expect-error
-import { Input } from "@/components/ui/input"
-//@ts-expect-error
-import { Label } from "@/components/ui/label"
-//@ts-expect-error
-import { Button } from "@/components/ui/button"
-//@ts-expect-error
 import { cn } from "@/lib/utils"
-//@ts-ignore
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+import { Button } from "@/components/ui/button"
 import {
   Command,
   CommandEmpty,
@@ -16,7 +11,6 @@ import {
   CommandItem,
   CommandList,
 } from "@/components/ui/command"
-//@ts-ignore
 import {
   Popover,
   PopoverContent,
