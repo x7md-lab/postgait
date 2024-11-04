@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { FormEvent, useState } from 'react'
 import { cn } from "@/lib/utils"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
@@ -40,6 +40,16 @@ const counties = [
   // },
 ]
 
+async function login(e: FormEvent<HTMLFormElement>){
+  e.preventDefault();
+  const theFormData = new FormData(e.currentTarget);
+  const url = new URL('http://localhost:5173/api/auth')
+  url.searchParams.set('username', (theFormData.get("phone")?.toString() || ""))
+  url.searchParams.set('password', (theFormData.get("password")?.toString() || ""))
+  const dataResp = await (await fetch(url, {method: "GET"})).json()
+  console.log(dataResp);
+}
+
 function App() {
   return (
     <>
@@ -66,7 +76,7 @@ function App() {
           </div>
         </div>
         <div className="lg:col-span-3 lg:order-none order-first w-full flex flex-col items-center p-5">
-          <form className="my-7 flex flex-col gap-8 items-center text-[#48505E]">
+          <form onSubmit={(e)=> login(e)} className="my-7 flex flex-col gap-8 items-center text-[#48505E]">
           <img className="my-4" src="/postgait/logo.svg" />
               <div className="text-center px-16 mix-w-[85px]">
               <h2 className="font-bold text-2xl text-black">Log in to your account</h2>
@@ -76,15 +86,15 @@ function App() {
               </span>
             </div>
             <div className="grid w-full max-w-sm items-center gap-1.5 px-8">
-              <Label htmlFor="verification">Verification</Label>
-              <Input type="text" id="verification" placeholder="Enter your verification" />
-            </div>
-            <div className="grid w-full max-w-sm items-center gap-1.5 px-8">
               <Label htmlFor="phone">Mobile Number</Label>
               <div className="flex w-full max-w-sm items-center space-x-2">
-                <ComboboxDemo />
-                <Input type="text" id="phone" placeholder="5x xxx xxxx" />
+                <div style={{pointerEvents: "none"}}><ComboboxDemo /></div>
+                <Input type="tel" id="phone" name="phone" placeholder="5x xxx xxxx" />
               </div>
+            </div>
+            <div className="grid w-full max-w-sm items-center gap-1.5 px-8">
+              <Label htmlFor="password">Password</Label>
+              <Input type="text" id="password" name="password" placeholder="Enter your Password" />
             </div>
             <div className="w-full max-w-sm px-8 text-center">
               <Button className="p-4 w-full bg-[#FC746C] hover:bg-slate-400" type="submit">Sign in</Button>
@@ -114,7 +124,7 @@ export function ComboboxDemo() {
             ? <span><span className='emoji'>{counties.find((country) => country.value === value)?.label.split(" ")[0]}</span> 
               <span>{counties.find((country) => country.value === value)?.label.split(" ")[1]}</span>
             </span>
-            : "🏳️"}
+            : <span className='flex flex-row mx-2'><img className='size-4' src="https://em-content.zobj.net/source/apple/391/flag-saudi-arabia_1f1f8-1f1e6.png" /> +966</span>}
          <svg xmlns="http://www.w3.org/2000/svg" className='size-5' viewBox="0 0 24 24">
          <path fill="currentColor" d="m7 10l5 5l5-5z"/>
          </svg>
