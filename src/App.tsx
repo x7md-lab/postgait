@@ -118,7 +118,7 @@ export function ComboboxDemo() {
           variant="outline"
           role="combobox"
           aria-expanded={open}
-          className="justify-between text-xs"
+          className="justify-between text-xs px-1"
         >
           {value
             ? <span><span className='emoji'>{counties.find((country) => country.value === value)?.label.split(" ")[0]}</span> 
