@@ -53,26 +53,26 @@ async function login(e: FormEvent<HTMLFormElement>){
 function App() {
   return (
     <>
-      <section className='bg-white grid lg:grid-cols-7 grid-cols-1  h-full'>
-        <div className='w-full lg:col-span-4 bg-[#FC746C]'>
-          <div className="grid">
+      <section className='bg-white grid lg:grid-cols-7 grid-cols-1 h-full'>
+        <div className='relative w-full lg:col-span-4 bg-[#FFDDDD]'>
+          <div className="grid p-2">
             <img className='col-start-1 row-start-1 w-full max-h-[400px]' src="/postgait/shine.svg" />
-            <div className="col-start-1 row-start-1 flex flex-col p-8 gap-12">
+            <div className="col-start-1 row-start-1 flex flex-col p-6 gap-8">
               <svg className="size-24" viewBox="0 0 113 113" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M57.5 107.005L57.5 5.99999" stroke="white" stroke-width="12" stroke-linecap="round"/>
-                <path d="M6 57.0001L107.005 57.0001" stroke="white" stroke-width="12" stroke-linecap="round"/>
-                <path d="M21 92.4214L92.4213 21.0002" stroke="white" stroke-width="12" stroke-linecap="round"/>
-                <path d="M21 21.0001L92.4213 92.4213" stroke="white" stroke-width="12" stroke-linecap="round"/>
+                <path d="M57.5 107.005L57.5 5.99999" stroke="#4D1A2D" stroke-width="12" stroke-linecap="round"/>
+                <path d="M6 57.0001L107.005 57.0001" stroke="#4D1A2D" stroke-width="12" stroke-linecap="round"/>
+                <path d="M21 92.4214L92.4213 21.0002" stroke="#4D1A2D" stroke-width="12" stroke-linecap="round"/>
+                <path d="M21 21.0001L92.4213 92.4213" stroke="#4D1A2D" stroke-width="12" stroke-linecap="round"/>
               </svg>
-              <h1 className="font-bold text-white lg:text-8xl text-5xl">
-              Hello<br/>
-              Postgait!
+              <h1 className="font-bold text-[#4D1A2D] lg:text-6xl text-4xl">
+              <span className='lg:text-5xl text-3xl'>Hello<br/></span>
+              Troxo!
               </h1>
-              <span className="font-medium text-white text-xl">
+              <span className="font-medium text-[#4D1A2D] text-lg">
                 Easily manage your shipments with Postgate for a practical shipping solution.
               </span>
             </div>
-           
+            <img className='w-full absolute bottom-0' src="/postgait/delivery5.svg" />
           </div>
         </div>
         <div className="lg:col-span-3 lg:order-none order-first w-full flex flex-col items-center p-5">
@@ -97,8 +97,8 @@ function App() {
               <Input type="text" id="password" name="password" placeholder="Enter your Password" />
             </div>
             <div className="w-full max-w-sm px-8 text-center">
-              <Button className="p-4 w-full bg-[#FC746C] hover:bg-slate-400" type="submit">Sign in</Button>
-              <span className="font-light text-xs">If you encounter any problems, <a href="#" className="text-[#FC746C]">please contact us.</a></span>
+              <Button className="p-4 w-full bg-[#FFDDDD] hover:bg-yellow-50 text-[#4D1A2D]" type="submit">Sign in</Button>
+              <span className="font-light text-xs">If you encounter any problems, <a href="#" className="text-[#4D1A2D]">please contact us.</a></span>
             </div>
           </form>
         </div>
