@@ -55,7 +55,7 @@ function App() {
     <>
       <section className='bg-white grid lg:grid-cols-7 grid-cols-1 h-full'>
         <div className='relative w-full lg:col-span-4 bg-[#FFDDDD]'>
-          <div className="grid p-2">
+          <div className="grid py-2">
             <img className='col-start-1 row-start-1 w-full max-h-[400px]' src="/postgait/shine.svg" />
             <div className="col-start-1 row-start-1 flex flex-col p-6 gap-8">
               <svg className="size-24" viewBox="0 0 113 113" fill="none" xmlns="http://www.w3.org/2000/svg">
